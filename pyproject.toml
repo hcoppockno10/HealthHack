@@ -1,0 +1,10 @@
+[project]
+name = "healthhack"
+version = "0.1.0"
+description = "Repo for hack contestants"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "inspect-ai>=0.3.72",
+    "openai>=1.65.4",
+]
