@@ -14,3 +14,6 @@ wheels/
 
 # experiment logs
 logs/
+
+# data
+.data/
