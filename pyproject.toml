@@ -5,6 +5,7 @@ description = "Repo for hack contestants"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "azure-ai-inference>=1.0.0b9",
     "inspect-ai>=0.3.72",
     "markdownify>=1.1.0",
     "openai>=1.65.4",

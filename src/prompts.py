@@ -62,11 +62,11 @@ You have been provided with the following medical data. Pay particular care into
 """
 
 USE_BROWSER_PROMPT = r"""" \
-You must use the web browser tool to help you make your diagnosis. The following websites may be useful:
+YOU MUST use the web browser tool to help you make your diagnosis. The following websites may be useful:
 https://bnf.nice.org.uk/search/?q= (search for key information on the selection, prescribing, dispensing, administration and interactions of medicines.)
-https://www.nice.org.uk/search?q= (search the National Institute for Health and Care Excellence for guidelines of Patient specific features)" \
+https://www.nice.org.uk/search?q= (search the National Institute for Health and Care Excellence for guidelines of Patient specific features) \
 """
 
 USE_BNF_TOOL_PROMPT = r"""" \
-"You must use the BNF tool to help you make your diagnosis. Please verbatum cite any key information you may find." \
+YOU MUST use the BNF tool to help you make your diagnosis. Please verbatum cite any key information you may find. \
 """

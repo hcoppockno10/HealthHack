@@ -4,7 +4,7 @@ from inspect_ai import Task, task
 from inspect_ai.dataset import Sample
 from inspect_ai.scorer import includes
 from inspect_ai.solver import generate, use_tools
-from inspect_ai.tool import web_browser
+from inspect_ai.tool import web_browser, ToolFunction
 
 from inspect_ai.dataset import Sample, json_dataset, Dataset
 
@@ -45,9 +45,10 @@ def medication_review():
                 *web_browser(),
                 bnf_drug_profiles_tool(),
                 bnf_drug_interactions_tool()
-            ]),
+            ],
+            ),
             generate(),
         ],
-        scorer=includes(),
+        scorer=None,
         sandbox="docker",
     )
