@@ -1,4 +1,7 @@
 from abc import ABC, abstractmethod
+import json
+
+from .models import Patient
 
 class PatientSchemaHandler(ABC):
     @abstractmethod
@@ -20,3 +23,9 @@ class V1Handler(PatientSchemaHandler):
             consultations=data_dict.get("consultations", []),
             medical_data=data_dict.get("medical_data"),
         )
+    
+def load_jsonl(file_path: str, handler: PatientSchemaHandler):
+    with open(file_path, "r") as file:
+        for line in file:
+            data_dict = json.loads(line)
+            yield handler.load_patient(data_dict)
