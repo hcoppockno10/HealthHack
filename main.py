@@ -13,6 +13,8 @@ from src.models import Patient
 from src.solvers import process_prescription_information
 from src.drug_tools import bnf_drug_interactions_tool, bnf_drug_profiles_tool
 
+from src.contribution import medication_review_critique
+
 
 
 def record_to_sample(record: Patient) -> Sample:
@@ -48,6 +50,7 @@ def medication_review():
             ],
             ),
             generate(),
+            medication_review_critique(),
         ],
         scorer=None,
         sandbox="docker",
